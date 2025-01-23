@@ -30,6 +30,25 @@
 
 <script setup>
 import ServerHead from '~/components/serverHead.vue'
+
+//Change to fetching from api
+import { useFetch } from "#app";
+const { data: friends } = await useFetch("/api/friends");
+
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const slug = route.params.slug; // Access the slug from route params
+
+const currentFriend = ref([])
+for (let i = 0; i < friends.value["friends"].length; i++) {
+    const friend = friends.value["friends"][i];
+
+    if (friend["name"] == slug) {
+        currentFriend.value = friend
+    }
+}
+
 </script>
 
 <style>
