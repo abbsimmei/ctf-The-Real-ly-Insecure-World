@@ -9,7 +9,7 @@ Planeringen hittar du i PDF:en på main 👽
 
 
 ## Hemsidan
-<small>(All info under Hemsidan och FAST API rubrikerna</small> är för att köra koden lokalt på datorn. Mer dokumentation för hur jag kommer sätta upp det på Raspberry PI kommer vid senare skede.)
+<sub>(All info under Hemsidan och FAST API rubrikerna är för att köra koden lokalt på datorn. Mer dokumentation för hur jag kommer sätta upp det på Raspberry PI kommer vid senare skede.)</sub>
 
 Hemsidan använder sig av Nuxt och Tailwind. För att ladda ner alla dependencies kör kommandot i terminalen:
 
