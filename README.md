@@ -4,7 +4,7 @@ Cybersecurity Simon Meier
 
 ## Planering
 
-Planeringen hittar du i PDF:en på main 👽
+Planeringen hittar du i PDF:en på main 🔥🔥🔥🦅🦅🦅🦅🗽🗽🗽🗽
 
 
 
