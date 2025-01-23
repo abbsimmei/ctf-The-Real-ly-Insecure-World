@@ -2,7 +2,7 @@
     <div class="p-4 font-bold text-lg">User Info</div>
     <div class="p-4 mt-4 flex flex-col items-center space-y-4">
         <!-- Profile Picture -->
-        <img :src="`/images/friendLogos/${currentFriend['image']}.png`" alt="User" class="w-20 h-20 rounded-full">
+        <img :src="`/images/friendLogos/${currentFriend['name']}.png`" alt="User" class="w-20 h-20 rounded-full">
 
         <!-- Username -->
         <p class="text-xl font-bold">{{ currentFriend['name'] }}</p>
@@ -43,7 +43,11 @@
 <script setup>
 //Change to fetching from api
 import { useFetch } from "#app";
-const { data: friends } = await useFetch("/api/friends");
+
+// ########################
+// #        API           #
+// ########################
+const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
 
 import { useRoute } from 'vue-router';
 

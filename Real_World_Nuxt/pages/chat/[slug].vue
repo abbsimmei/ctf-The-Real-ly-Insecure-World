@@ -14,7 +14,7 @@
                     <ChatMessages></ChatMessages>
                 </div>
                 <!-- Input Box -->
-                <div class="bg-gray-800 p-4">
+                <div class="bg-gray-800 p-4 pt-6">
                     <input type="text" placeholder="Message #general"
                         class="w-full p-2 bg-gray-700 rounded-sm text-white">
                 </div>
@@ -33,7 +33,15 @@ import ServerHead from '~/components/serverHead.vue'
 
 //Change to fetching from api
 import { useFetch } from "#app";
-const { data: friends } = await useFetch("/api/friends");
+
+
+// ########################
+// #        API           #
+// ########################
+
+//const { data: friends } = await useFetch("/api/friends");
+const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
+
 
 import { useRoute } from 'vue-router';
 

@@ -3,7 +3,7 @@
         <NuxtLink :to="`/chat/${friend['name']}`">
             <div class="flex items-center justify-between p-2 hover:bg-gray-700 rounded-sm">
                 <div class="flex items-center space-x-4">
-                    <img class="w-12 h-12 bg-gray-600 rounded-full" :src="`/images/friendLogos/${friend['image']}.png`">
+                    <img class="w-12 h-12 bg-gray-600 rounded-full" :src="`/images/friendLogos/${friend['name']}.png`">
                     <div>
                         <div class="font-bold">{{ friend['name'] }}</div>
                         <div class="text-sm text-gray-400">{{ friend['status'] }}</div>
@@ -25,7 +25,11 @@ import { NuxtLink } from '#components'
 
 //Change to fetching from api
 import { useFetch } from "#app";
-const { data: friends } = await useFetch("/api/friends");
+
+// ########################
+// #        API           #
+// ########################
+const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
 
 
 </script>
