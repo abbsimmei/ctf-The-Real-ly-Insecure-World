@@ -11,7 +11,7 @@
                     <span>Chat</span>
                 </div>
                 <div class="flex-1 overflow-y-auto p-4 space-y-4">
-                    <ChatMessages></ChatMessages>
+                    <ChatMessages :chatID="chatID"></ChatMessages>
                 </div>
                 <!-- Input Box -->
                 <div class="bg-gray-800 p-4 pt-6">
@@ -34,6 +34,8 @@ import ServerHead from '~/components/serverHead.vue'
 //Change to fetching from api
 import { useFetch } from "#app";
 
+import { combine } from "~/utils/functions/createChatID";
+import { useRoute } from 'vue-router';
 
 // ########################
 // #        API           #
@@ -43,7 +45,6 @@ import { useFetch } from "#app";
 const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
 
 
-import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const slug = route.params.slug; // Access the slug from route params
@@ -56,6 +57,7 @@ for (let i = 0; i < friends.value["friends"].length; i++) {
         currentFriend.value = friend
     }
 }
+const chatID = await combine(currentFriend.value["id"])
 
 </script>
 

@@ -1,0 +1,19 @@
+{
+    "chat": [
+        {
+            "sender": "Average_Spetsare",
+            "message": "Do you know anything about a CTF flag?",
+            "time": "2025/01/23"
+        },
+        {
+            "sender": "Patriotic_Flag_Nerd",
+            "message": "No comments",
+            "time": "2025/01/23"
+        },
+        {
+            "sender": "Average_Spetsare",
+            "message": "Alright then, Mr. American >:(",
+            "time": "2025/01/23"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 <template>
     <!-- Chat messages -->
-    <div class="flex items-start space-x-4" v-for="chatI in chat['chat']">
+    <div class="flex items-start space-x-4" v-for="chatI in chat['item_id']['chat']">
         <img :src="`/images/friendLogos/${chatI['sender']}.png`" class="w-10 h-10 rounded-full">
         <div>
             <p class="font-bold">{{ chatI['sender'] }} <span class="text-sm text-gray-500">{{ chatI['time'] }}</span>
@@ -8,7 +8,6 @@
             <p>{{ chatI['message'] }}</p>
         </div>
     </div>
-
 </template>
 
 <script setup>
@@ -27,7 +26,15 @@ const slug = route.params.slug; // Access the slug from route params
 import { findSingleFriend } from "~/utils/functions/loadFriends";
 const currentFriend = findSingleFriend(slug, friends)
 
-const { data: chat } = await useFetch("/api/chatar/test");
+//const { data: chat } = await useFetch("/api/chatar/test");
+
+//Load chat
+const props = defineProps({
+  chatID: String 
+});
+console.log(props["chatID"])
+const { data: chat } = await useFetch("http://127.0.0.1:8000/chat/" + props["chatID"]);
+console.log(chat)
 
 
 </script>
