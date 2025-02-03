@@ -41,8 +41,9 @@ import { useRoute } from 'vue-router';
 // #        API           #
 // ########################
 
+const { data: APIroute } = await useFetch("/api/ipAdress");
 //const { data: friends } = await useFetch("/api/friends");
-const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
+const { data: friends } = await useFetch(`${APIroute.value}/friends/`)
 
 
 

@@ -16,7 +16,10 @@ import { useFetch } from "#app";
 // ########################
 // #        API           #
 // ########################
-const { data: friends } = await useFetch("http://127.0.0.1:8000/friends/")
+const { data: APIroute } = await useFetch("/api/ipAdress");
+//const { data: friends } = await useFetch("/api/friends");
+const { data: friends } = await useFetch(`${APIroute.value}/friends/`)
+
 
 import { useRoute } from 'vue-router';
 
@@ -32,9 +35,11 @@ const currentFriend = findSingleFriend(slug, friends)
 const props = defineProps({
   chatID: String 
 });
-console.log(props["chatID"])
-const { data: chat } = await useFetch("http://127.0.0.1:8000/chat/" + props["chatID"]);
-console.log(chat)
+
+
+
+//const { data: friends } = await useFetch("/api/friends");
+const { data: chat } = await useFetch(`${APIroute.value}/chat/` + props["chatID"])
 
 
 </script>
