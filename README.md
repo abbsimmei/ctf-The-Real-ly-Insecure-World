@@ -80,6 +80,7 @@ En Node server borde nu ha startat.
 
 I /etc/nginx/sites-available/default lägg in det här:
 
+'''
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -95,6 +96,7 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
+'''
 
  > sudo systemctl restart nginx
 
