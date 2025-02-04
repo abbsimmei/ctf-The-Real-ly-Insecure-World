@@ -17,8 +17,8 @@ Detta ska du göra i foldern API, där skapar vi en virtual environment för att
 
 
 ### Installera virtualenv
-sudo apt update
-sudo apt install python3-venv -y
+ > sudo apt update
+ > sudo apt install python3-venv -y
 
 ### Skapa en virtual environment
 python3 -m venv myenv
