@@ -15,39 +15,33 @@ Projektet använde sig av den senaste stabila ubuntu desktop versionen.
 
 Detta ska du göra i foldern API, där skapar vi en virtual environment för att kunna köra python.
 
-´´´
-# Installera virtualenv
+
+### Installera virtualenv
 sudo apt update
 sudo apt install python3-venv -y
 
-# Skapa en virtual environment
+### Skapa en virtual environment
 python3 -m venv myenv
 
-# Aktivera virtual environment
+### Aktivera virtual environment
 source myenv/bin/activate
-´´´
 
 Det borde nu stå (myenv) på din shell prompt.
 
 ### Installera fastapi
-´´
 
 pip install --upgrade pip 
 pip install "fastapi[standard]" 
 
-´´
-
 Nu kan vi starta API'n.
 
-´´´
-
-# Installera uvicorn
+### Installera uvicorn
 pip install uvicorn
 
-# Starta appen.
+### Starta appen.
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-´´´
+
 
 
 
