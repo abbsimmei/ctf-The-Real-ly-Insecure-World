@@ -30,12 +30,12 @@ source myenv/bin/activate
 Det borde nu stå (myenv) på din shell prompt.
 
 ### Installera fastapi
-´´´
+´´
 
 pip install --upgrade pip 
 pip install "fastapi[standard]" 
 
-´´´
+´´
 
 Nu kan vi starta API'n.
 
