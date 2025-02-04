@@ -43,8 +43,62 @@ Nu kan vi starta API'n.
 ### Starta appen.
  > uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
+API'n körs nu på raspberry PI ens IP:8000 vilket du kan hitta med hostname -I
 
 
+## Hemsidan
+
+Hemsidan körs med hjälp av en node-server och Nginx som reverse proxy. 
+
+### Installera Node.js
+
+ > sudo apt update
+
+ > sudo apt install nodejs npm
+
+ > node -v #Kolla om versionen är över 18+
+
+### Build Hemsidan
+
+I Real_World_Nuxt kör:
+
+ > npm install
+
+ > npm run build
+
+ > npm run start
+
+En Node server borde nu ha startat. 
+
+### Nginx reverse proxy
+
+ > sudo apt install nginx
+
+ > sudo systemctl start nginx
+
+ > sudo systemctl enable nginx
+
+I /etc/nginx/sites-available/default lägg in det här:
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+
+    location / {
+        proxy_pass http://localhost:3000; # Forward to Nuxt
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+ > sudo systemctl restart nginx
+
+Gå nu in på raspberry Pi'ens IP adress och allt borde fungera! Fråga Simon eller ChatGPT om det inte gör det...
 
 
 
