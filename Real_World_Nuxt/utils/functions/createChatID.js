@@ -3,7 +3,10 @@ function isEven(number) {
 }
 
 export async function combine(id1) {
-    const { data: you } = await useFetch("http://127.0.0.1:8000/you/")
+    const { data: APIroute } = await useFetch("/api/ipAdress");
+    //const { data: friends } = await useFetch("/api/friends");
+
+    const { data: you } = await useFetch(`${APIroute.value}/you/`)
     const youID  = you.value["you"][0]["id"]
     let newID = ""
 

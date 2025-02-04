@@ -7,6 +7,53 @@ Cybersecurity Simon Meier
 Planeringen hittar du i PDF:en på main 🔥🔥🔥🦅🦅🦅🦅🗽🗽🗽🗽
 
 
+# Hosta Hemsidan på en Raspberry PI 5
+
+Projektet använde sig av den senaste stabila ubuntu desktop versionen. 
+
+## Fast API
+
+Detta ska du göra i foldern API, där skapar vi en virtual environment för att kunna köra python.
+
+'''
+# Installera virtualenv
+sudo apt update
+sudo apt install python3-venv -y
+
+# Skapa en virtual environment
+python3 -m venv myenv
+
+# Aktivera virtual environment
+source myenv/bin/activate
+'''
+
+Det borde nu stå (myenv) på din shell prompt.
+
+'''
+# Installera fastapi
+
+pip install --upgrade pip 
+pip install "fastapi[standard]" 
+
+'''
+
+Nu kan vi starta API'n.
+
+'''
+
+# Installera uvicorn
+pip install uvicorn
+
+# Starta appen.
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+
+'''
+
+
+
+
+# Kör hemsidan lokalt ("outdated")
 
 ## Hemsidan
 <sub>(All info under Hemsidan och FAST API rubrikerna är för att köra koden lokalt på datorn. Mer dokumentation för hur jag kommer sätta upp det på Raspberry PI kommer vid senare skede.)</sub>
