@@ -1,7 +1,10 @@
 <template>
-    <div class="w-1/5 bg-gray-900 flex flex-col">
+    <div class="w-1/5 h-screen bg-gray-900 flex flex-col">
+        <!-- Top Header -->
         <div class="p-4 bg-gray-800 font-bold h-16">Servers</div>
-        <div class="p-4 border-gray-950 border-r-4">
+
+        <!-- Server List (Expandable with Scroll) -->
+        <div class="p-4 border-gray-950 border-r-4 flex-grow overflow-y-auto">
             <NuxtLink :to="`/`">
                 <ServerHead class="p-2 rounded-sm hover:bg-gray-700 cursor-pointer" title="Direct messages"
                     :image="'discord'" :isActive="true"></ServerHead>
@@ -20,7 +23,9 @@
             <ServerHead class="p-2 rounded-sm hover:bg-gray-700 cursor-pointer" title="Swinceball's server"
                 :image="'swinceball'" :isActive="false"></ServerHead>
         </div>
-        <div class="flex bg-gray-800 p-4 mt-6 justify-center items-center">
+
+        <!-- User Profile Section (Stays at Bottom) -->
+        <div class="flex bg-gray-800 p-4 justify-center items-center mt-auto">
             <img class="rounded-full w-10 h-10 mr-4" :src="`/images/friendLogos/Average_Spetsare.png`">
             <div class="mr-2">
                 <p>Average_Spetsare</p>
