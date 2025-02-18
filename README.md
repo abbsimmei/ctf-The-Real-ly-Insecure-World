@@ -60,6 +60,9 @@ Hemsidan körs med hjälp av en node-server och Nginx som reverse proxy.
 
 ### Build Hemsidan
 
+Innan du buildar måste du ändra ipAdressen som hemsidan använder sig för att requesta API. Så I Real_World_Nuxt/server/api/ipAdress.js bytt ut adressen till adressen på API't
+Det borde vara Raspberry pi'ens ip address som du kan få med hostname -I och sen :8000
+
 I Real_World_Nuxt kör:
 
  > npm install
