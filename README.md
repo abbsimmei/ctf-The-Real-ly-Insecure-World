@@ -6,6 +6,9 @@ Cybersecurity Simon Meier
 
 Planeringen hittar du i PDF:en på main 🔥🔥🔥🦅🦅🦅🦅🗽🗽🗽🗽
 
+# Known bugs
+
+- Images have the wrong name. This is easily fixed by changing the case of their letters.
 
 # Hosta Hemsidan på en Raspberry PI 5
 
