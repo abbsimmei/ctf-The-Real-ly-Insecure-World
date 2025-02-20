@@ -4,7 +4,12 @@ Cybersecurity Simon Meier
 
 ## Planering
 
-Planeringen hittar du i PDF:en på main 🔥🔥🔥🦅🦅🦅🦅🗽🗽🗽🗽
+Planeringen hittar du i de två PDF:erna på main
+Den första är version 1.0 och den andra är 2.0.
+
+# Hur ska CTF:en delas med klassen vid tävlingen.
+
+Jag kommer att hosta hemsidan som de ska hacka på en raspberry pi. Jag kommer sätta på den på tisdag innan lektionen. Men för att ni ska kunna plannera så är jag 99% på att detta är ip:adressen: http://10.22.5.91/
 
 # Known bugs
 
