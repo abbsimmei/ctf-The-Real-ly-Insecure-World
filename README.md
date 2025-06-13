@@ -1,19 +1,6 @@
 # Real(ly Insecure) World
 
-Cybersecurity Simon Meier
-
-## Planering
-
-Planeringen hittar du i de två PDF:erna på main
-Den första är version 1.0 och den andra är 2.0.
-
-# Hur ska CTF:en delas med klassen vid tävlingen.
-
-Dela foldern Real_World_Uppgift. Jag är 99% säker att det är rätt ip, men vi får se där och då...
-
-# Known bugs
-
-- Images have the wrong name. This is easily fixed by changing the case of their letters.
+This is a website I made in 3:rd class for a capture-the-flag challenge. 
 
 # Hosta Hemsidan på en Raspberry PI 5
 
